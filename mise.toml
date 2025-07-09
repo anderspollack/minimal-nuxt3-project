@@ -1,0 +1,19 @@
+[env]
+CHROMATIC_PROJECT_TOKEN = "chpt_03c51af17a74a3e"
+NUXT_SITE_URL = "https://www.getty.edu"
+
+[settings]
+activate_aggressive = true
+
+[tasks."chromatic:baseline"]
+description = "Create baseline snapshots for Chromatic visual diff tests"
+alias = "snapshots-baseline"
+confirm = '''
+Create new baseline snapshots of https://www.getty.edu?
+'''
+env.CHROMATIC_TEST_URL = "https://www.getty.edu"
+env.CI = true
+run = [
+    "npx playwright test",
+    "npx chromatic --playwright --project-token={{ get_env(name='CHROMATIC_PROJECT_TOKEN') }} --force-rebuild --exit-zero-on-changes --auto-accept-changes",
+]

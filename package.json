@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.17.6",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.5",
+    "@nuxt/test-utils": "^3.19.2",
+    "@playwright/test": "^1.53.2",
+    "@vue/test-utils": "^2.4.6",
+    "chromatic": "^13.1.2",
+    "happy-dom": "^18.0.1",
+    "playwright-core": "^1.53.2",
+    "vitest": "^3.2.4"
+  }
+}
