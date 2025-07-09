@@ -17,3 +17,13 @@ run = [
     "npx playwright test",
     "npx chromatic --playwright --project-token={{ get_env(name='CHROMATIC_PROJECT_TOKEN') }} --force-rebuild --exit-zero-on-changes --auto-accept-changes",
 ]
+
+[tasks."chromatic:diff"]
+description = "Run Playwright snapshot tests and upload results to Chromatic for diff against baseline snapshots"
+alias = "snapshots-diff"
+env.CHROMATIC_TEST_URL = "http://localhost:3000"
+env.CI = true
+run = [
+    "npx playwright test tests/snapshot",
+    "npx chromatic --playwright --project-token={{ get_env(name='CHROMATIC_PROJECT_TOKEN') }} --exit-zero-on-changes",
+]
