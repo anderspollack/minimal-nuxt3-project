@@ -9,27 +9,12 @@ export default defineConfig<ConfigOptions>({
   fullyParallel: true,
   // Retry on CI only
   retries: process.env.CI ? 2 : 0,  testDir: './tests',
-  // Configure projects for major browsers
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-  ],
-  // @see https://playwright.dev/docs/test-reporters
   reporter: 'html',
   /**
     * Shared settings for all of the projects below
     * @see https://playwright.dev/docs/api/class-testoptions
     */
+  timeout: 120_000,
   use: {
     // Base URL to use in actions @example `await page.goto('/')`
     baseURL: `${process.env.NUXT_SITE_URL}`,

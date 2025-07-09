@@ -14,13 +14,13 @@ const getTestNameFromPath = (pathname) => {
   return name.slice(1).replaceAll('/', '-');
 };
 
-test.use({ delay: 300, ignoreSelectors: ['.a-ribbon', '.g-header', '.g-footer'] });
-test.setTimeout(60_000);
+test.use({ delay: 1000, ignoreSelectors: ['.a-ribbon', '.g-header', '.g-footer'] });
 
 paths.forEach((pathname) => {
   const url = new URL(pathname, hostname).toString();
   test(getTestNameFromPath(pathname), async ({ page }) => {
     await page.goto(url);
+    await page.click('.g-alert__close');
     await expect(page).toHaveURL(url);
   });
 });
