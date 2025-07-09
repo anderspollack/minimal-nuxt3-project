@@ -21,7 +21,7 @@ run = [
 [tasks."chromatic:diff"]
 description = "Run Playwright snapshot tests and upload results to Chromatic for diff against baseline snapshots"
 alias = "snapshots-diff"
-env.CHROMATIC_TEST_URL = "http://localhost:3000"
+env.CHROMATIC_TEST_URL = "https://dev-www.aws.getty.edu/"
 env.CI = true
 run = [
     "npx playwright test",
