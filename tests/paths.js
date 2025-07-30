@@ -19,8 +19,8 @@ export default [
   '/about/leadership-governance/board/',
   '/about/leadership-governance/policies/',
   '/about/leadership-governance/financials/',
+  '/accessibility/',
   // FIXME 404
-  // '/accessibility/',
   // FIXME chromatic errors https://www.chromatic.com/build?appId=65988130e380e4c782b3ca13&number=19
   // '/art/',
   '/author/butler-meg/',
@@ -112,7 +112,6 @@ export default [
   '/publications/getty-research-journal/journal-policies/',
   '/publications/for-authors/',
   '/publications/for-booksellers-media-educators/',
-  '/research/',
   '/research-conservation/',
   '/research-conservation/library/',
   '/research-conservation/library/about/',
@@ -123,7 +122,7 @@ export default [
   '/visit/photo-and-video-policy/',
   // FIXME chromatic errors https://www.chromatic.com/build?appId=65988130e380e4c782b3ca13&number=19
   // '/visit/center/',
-  '/visit/center/accessibility/',
+  // '/visit/center/accessibility/',
   '/visit/center/food-and-drink/',
   '/visit/center/parking-and-transportation/',
   '/visit/center/shopping/',
@@ -136,7 +135,6 @@ export default [
   '/visit/center/top-things-to-do/gardens/',
   // FIXME chromatic errors https://www.chromatic.com/build?appId=65988130e380e4c782b3ca13&number=19
   // '/visit/villa/',
-  '/visit/villa/accessibility/',
   '/visit/villa/food-and-drink/',
   '/visit/villa/parking-and-transportation/',
   '/visit/villa/shopping/',

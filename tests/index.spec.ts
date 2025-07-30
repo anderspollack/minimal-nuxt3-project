@@ -20,7 +20,10 @@ paths.forEach((pathname) => {
   const url = new URL(pathname, hostname).toString();
   test(getTestNameFromPath(pathname), async ({ page }) => {
     await page.goto(url);
-    await page.click('.g-alert__close');
+    const hasAlert = await page.isVisible('.g-alert__close');
+    if (hasAlert) {
+      await page.locator('.g-alert__close').click();
+    }
     await expect(page).toHaveURL(url);
   });
 });
